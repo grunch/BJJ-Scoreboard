@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(
+      content="width=device-width, initial-scale=1, shrink-to-fit=no",
+      name="viewport"
+    )
+    link(rel='manifest', href='/manifest.json')
+    title= title
+    link(
+      crossorigin="anonymous",
+      href="/css/bootstrap.min.css",
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
+      rel="stylesheet",
+    )
+    link(rel='stylesheet', href='/css/main.css')
+  body
+    block content
+    block scripts
+      script(
+        crossorigin="anonymous",
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo",
+        src="/js/jquery-3.3.1.slim.min.js"
+      )
+      script(
+        crossorigin="anonymous",
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1",
+        src="/js/popper.min.js"
+      )
+      script(
+        crossorigin="anonymous",
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM",
+        src="/js/bootstrap.min.js"
+      )
+      script(src="/socket.io/socket.io.js")
+      script(src="/js/main.js")

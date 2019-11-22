@@ -1,0 +1,222 @@
+html, body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repear(1fr, 12);
+  grid-template-rows: 2fr 1fr 5fr 2fr 1fr 1fr;
+  font-family: 'Roboto Mono, monospace';
+}
+
+.logo1 {
+  background-color: #000;
+  grid-row-start: 1;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo1 > img, .logo2 > img {
+  height: 112px;
+}
+
+.timer {
+  background-color: #000;
+  grid-row-start: 1;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+}
+
+.logo2 {
+  background-color: #000;
+  grid-row-start: 1;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 120px;
+  }
+}
+
+.fighter-name-1 {
+  background-color: #22A203;
+  color: #FCFF51;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row-start: 2;
+  grid-column: span 6;
+}
+
+.fighter-name-2 {
+  background-color: #fff;
+  color: #000;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row-start: 2;
+  grid-column: span 6;
+}
+
+.fighter-score-1 {
+  grid-row-start: 3;
+  grid-column: span 6;
+  background-color: #22A203;
+  color: #fff;
+  font-size: 15em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fighter-score-2 {
+  grid-row-start: 3;
+  grid-column: span 6;
+  background-color: #fff;
+  color: #000;
+  font-size: 15em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fighter-adv-1 {
+  background-color: #FCFF51;
+  color: #000;
+  font-size: 5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row-start: 4;
+  grid-column: span 3;
+}
+
+.fighter-penal-1 {
+  background-color: red;
+  color: #fff;
+  font-size: 5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row-start: 4;
+  grid-column: span 3;
+}
+
+.fighter-adv-2 {
+  background-color: #FCFF51;
+  color: #000;
+  font-size: 5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row-start: 4;
+  grid-column: span 3;
+}
+
+.fighter-penal-2 {
+  background-color: red;
+  color: #fff;
+  font-size: 5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row-start: 4;
+  grid-column: span 3;
+}
+
+.fighter-controls-add-1 {
+  background-color: #BBBBBB;
+  grid-row-start: 5;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.controls-1 {
+  background-color: #BBBBBB;
+  grid-row-start: 5;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fighter-controls-add-2 {
+  background-color: #BBBBBB;
+  grid-row-start: 5;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fighter-controls-sub-1 {
+  background-color: #BBBBBB;
+  grid-row-start: 6;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.controls-2 {
+  background-color: #BBBBBB;
+  grid-row-start: 6;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fighter-controls-sub-2 {
+  background-color: #BBBBBB;
+  grid-row-start: 6;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input#fighter-name-1 {
+  text-align: center;
+  background-color: #22A203;
+  color: #FCFF51;
+  font-weight: bold;
+  border: none;
+  width: 80%;
+}
+
+input#fighter-name-2 {
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  width: 80%;
+}
+
+input#fighter-name-1::placeholder { /* Most modern browsers support this now. */
+  color: #fff;
+}
+
+input#fighter-name-2::placeholder {
+  color: #000;
+}
