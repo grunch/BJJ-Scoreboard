@@ -14,6 +14,8 @@ With this software you can control the scoreboard from a mobile, tablet or any o
 ## Start
 
     npm start
+The system will be running on port 3000, so you just need to go to this url http://localhost:3000
 
+Now you need to let know to other users in your same network your IP address to let them operate the scoreboard, then they just need to write on their browser http://your-ip-address:3000
 ## License
 This software is open source, you can use it and modify without asking permission, to know more about it you can read the [license](LICENSE)
