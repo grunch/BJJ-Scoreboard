@@ -5,6 +5,8 @@ This is a websockets Brazilian Jiu-Jitsu scoreboard, we use it in our academy to
 
 With this software you can control the scoreboard from a mobile, tablet or any other device in the same wifi network. Hope it's useful to someone.
 
+![Scoreboard](./scoreboard.gif?raw=true "Scoreboard")
+
 ## Install
     git clone https://github.com/grunch/BJJ-Scoreboard.git
     cd bjj-scoreboard
@@ -14,4 +16,4 @@ With this software you can control the scoreboard from a mobile, tablet or any o
     npm start
 
 ## License
-This software is open source, you can use it and modify without asking permission, to know more about it you can read the [LICENSE](license)
+This software is open source, you can use it and modify without asking permission, to know more about it you can read the [license](LICENSE)
