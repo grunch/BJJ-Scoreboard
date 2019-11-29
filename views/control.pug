@@ -1,0 +1,89 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/css/control.css')
+  .fighter-1-name
+    input#fighter-1-name(
+      type="text",
+      placeholder="clic para agregar luchador"
+    )
+  .fighter-1-score 0
+  .fighter-1-4-points
+    .points-text Montada, Toma de espalda
+    .points-score 0
+    .points-btn
+      button.btn.btn-primary#add4f1 +
+      .qty 4
+      button.btn.btn-danger#sub4f1 -
+  .fighter-1-3-points
+    .points-text Pase de guardia
+    .points-score 0
+    .points-btn
+      button.btn.btn-primary#add3f1 +
+      .qty 3
+      button.btn.btn-danger#sub3f1 -
+  .fighter-1-2-points
+    .points-text Derribo, Raspada, Rodilla al pecho
+    .points-score 0
+    .points-btn
+      button.btn.btn-primary#add2f1 +
+      .qty 2
+      button.btn.btn-danger#sub2f1 -
+  .fighter-1-adv-pen
+    .adv-pen-text Ventaja
+    .fighter-1-adv.qty-adv-pen 0
+    .buttons
+      button.btn.btn-primary.btn-sm#addadvf1 +
+      button.btn.btn-danger.btn-sm#subadvf1 -
+    .adv-pen-text Penalizacion
+    .fighter-1-penal.qty-adv-pen 0
+    .buttons
+      button.btn.btn-primary.btn-sm#addpenalf1 +
+      button.btn.btn-danger.btn-sm#subpenalf1 -
+  .timer-box
+    .timer
+    .startBtn
+      i.fas.fa-play-circle#start
+      i.fas.fa-power-off#restart
+    .minBtn
+      button.btn.btn-dark.btn-sm#addmin +
+      i.fas.fa-hourglass-end
+      button.btn.btn-dark.btn-sm#submin -
+  .fighter-2-name
+    input#fighter-2-name(
+      type="text",
+      placeholder="clic para agregar luchador"
+    )
+  .fighter-2-4-points
+    .points-text Montada, Toma de espalda
+    .points-score 0
+    .points-btn
+      button.btn.btn-primary#add4f2 +
+      .qty 4
+      button.btn.btn-danger#sub4f2 -
+  .fighter-2-3-points
+    .points-text Pase de guardia
+    .points-score 0
+    .points-btn
+      button.btn.btn-primary#add3f2 +
+      .qty 3
+      button.btn.btn-danger#sub3f2 -
+  .fighter-2-2-points
+    .points-text Derribo, Raspada, Rodilla al pecho
+    .points-score 0
+    .points-btn
+      button.btn.btn-primary#add2f2 +
+      .qty 2
+      button.btn.btn-danger#sub2f2 -
+  .fighter-2-adv-pen
+    .adv-pen-text Ventaja
+    .fighter-2-adv.qty-adv-pen 0
+    .buttons
+      button.btn.btn-primary.btn-sm#addadvf2 +
+      button.btn.btn-danger.btn-sm#subadvf2 -
+    .adv-pen-text Penalizacion
+    .fighter-2-penal.qty-adv-pen 0
+    .buttons
+      button.btn.btn-primary.btn-sm#addpenalf2 +
+      button.btn.btn-danger.btn-sm#subpenalf2 -
+  .fighter-2-score 0  

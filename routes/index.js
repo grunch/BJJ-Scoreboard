@@ -6,12 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'BJJ Scoreboard' });
 });
 
-router.get('/test', function(req, res, next) {
-  res.render('test', { title: 'BJJ Scoreboard' });
-});
-
-router.get('/otro', function(req, res, next) {
-  res.render('otro', { title: 'BJJ Scoreboard' });
+router.get('/control', function(req, res, next) {
+  res.render('control', { title: 'BJJ Scoreboard control' });
 });
 
 module.exports = router;

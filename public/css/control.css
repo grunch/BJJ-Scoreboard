@@ -1,0 +1,217 @@
+html, body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(1fr, 12);
+  grid-template-rows: 1fr 2fr 2fr 1fr 4fr;
+  font-family: 'Roboto Mono, monospace';
+}
+
+.fighter-1-name {
+  background-color: #e5e8f4;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  grid-row-start: 1;
+  grid-column: span 8;
+  border-bottom: 1px solid #b7bac3;
+}
+
+input {
+  margin-left: 20px;
+  background-color: #e5e8f4;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  width: 80%;
+}
+
+input::placeholder { /* Most modern browsers support this now. */
+  color: #000;
+}
+
+.fighter-2-name {
+  background-color: #e5e8f4;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  grid-row-start: 4;
+  grid-column: span 8;
+  border-bottom: 1px solid #b7bac3;
+}
+
+.fighter-1-score {
+  grid-row: 1 / span 2;
+  grid-column: span 4;
+  background-color: #22A203;
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fighter-1-4-points {
+  background-color: #e5e8f4;
+  color: #000;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-row: 2 / span 2;
+  grid-column: span 2;
+}
+
+.fighter-1-3-points {
+  background-color: #e5e8f4;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-row: 2 / span 2;
+  grid-column: span 2;
+}
+
+.fighter-1-2-points {
+  background-color: #e5e8f4;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-row: 2 / span 2;
+  grid-column: span 2;
+}
+
+.fighter-1-adv-pen {
+  background-color: #e5e8f4;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-row: 2 / span 2;
+  grid-column: span 2;
+}
+
+.adv-pen-text {
+  font-size: 0.4em;
+}
+
+.timer-box {
+  grid-row: 3 / span 3;
+  grid-column: span 4;
+  background-color: #000;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fighter-2-4-points {
+  background-color: #e5e8f4;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-row: 5 / span 2;
+  grid-column: span 2;
+}
+
+.fighter-2-3-points {
+  background-color: #e5e8f4;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-row: 5 / span 2;
+  grid-column: span 2;
+}
+
+.fighter-2-2-points {
+  background-color: #e5e8f4;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-row: 5 / span 2;
+  grid-column: span 2;
+}
+
+.fighter-2-adv-pen {
+  background-color: #e5e8f4;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-row: 5 / span 2;
+  grid-column: span 2;
+}
+
+.fighter-2-score {
+  grid-row: 6 / span 1;
+  grid-column: span 4;
+  background-color: #fff;
+  color: #000;
+  font-size: 3em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.points-text {
+  font-size: 0.5em;
+}
+
+.points-score {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.points-btn {
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  font-weight: bold;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.startBtn, .minBtn {
+  font-size: 0.5em;
+  font-weight: bold;
+  display: flex;
+  width: 50%;
+  margin-top: 5px;
+  justify-content: space-between;
+  align-items: center;
+}

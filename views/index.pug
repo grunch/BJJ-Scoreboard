@@ -1,150 +1,56 @@
 extends layout
 
 block content
+  link(rel='stylesheet', href='/css/scoreboard.css')
   .logo1
     img(src="/images/360-ojo-300x279.png")
   .timer
   .logo2
-    img(src="/images/logo360-2.png")
-  .fighter-name-1
-    input#fighter-name-1(
+    a(href="/control")
+      img(src="/images/logo360-2.png")
+  .fighter-1-name
+    input#fighter-1-name(
       type="text",
       placeholder="clic para agregar luchador"
     )
-  .fighter-name-2
-    input#fighter-name-2(
+  .fighter-2-name
+    input#fighter-2-name(
       type="text",
       placeholder="clic para agregar luchador"
     )
-  .fighter-score-1 0
-  .fighter-score-2 0
-  .fighter-adv-1 0
-  .fighter-penal-1 0
-  .fighter-adv-2 0
-  .fighter-penal-2 0
-  .fighter-controls-add-1
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="add4f1"
-    ) + 4
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="add3f1"
-    ) + 3
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="add2f1"
-    ) + 2
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="addadvf1"
-    ) + vent
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="addpenalf1"
-    ) + penal
+  .fighter-1-score 0
+  .fighter-2-score 0
+  .fighter-1-adv 0
+  .fighter-1-penal 0
+  .fighter-2-adv 0
+  .fighter-2-penal 0
+  .fighter-1-controls-add
+    button.btn.btn-dark.btn-sm#add4f1 + 4
+    button.btn.btn-dark.btn-sm#add3f1 + 3
+    button.btn.btn-dark.btn-sm#add2f1 + 2
+    button.btn.btn-dark.btn-sm#addadvf1 + vent
+    button.btn.btn-dark.btn-sm#addpenalf1 + penal
   .controls-1
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="addmin"
-    ) + min
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="submin"
-    ) - min
-  .fighter-controls-add-2
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="add4f2"
-    ) + 4
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="add3f2"
-    ) + 3
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="add2f2"
-    ) + 2
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="addadvf2"
-    ) + vent
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="addpenalf2"
-    ) + penal
-  .fighter-controls-sub-1
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="sub4f1"
-    ) - 4
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="sub3f1"
-    ) - 3
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="sub2f1"
-    ) - 2
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="subadvf1"
-    ) - vent
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="subpenalf1"
-    ) - penal
+    button.btn.btn-dark.btn-sm#addmin + min
+    button.btn.btn-dark.btn-sm#submin - min
+  .fighter-2-controls-add
+    button.btn.btn-dark.btn-sm#add4f2 + 4
+    button.btn.btn-dark.btn-sm#add3f2 + 3
+    button.btn.btn-dark.btn-sm#add2f2 + 2
+    button.btn.btn-dark.btn-sm#addadvf2 + vent
+    button.btn.btn-dark.btn-sm#addpenalf2 + penal
+  .fighter-1-controls-sub
+    button.btn.btn-dark.btn-sm#sub4f1 - 4
+    button.btn.btn-dark.btn-sm#sub3f1 - 3
+    button.btn.btn-dark.btn-sm#sub2f1 - 2
+    button.btn.btn-dark.btn-sm#subadvf1 - vent
+    button.btn.btn-dark.btn-sm#subpenalf1 - penal
   .controls-2
-    button(
-      type=button
-      class="btn btn-success"
-      id="start"
-    ) Iniciar / Pausa
-    button(
-      type=button
-      class="btn btn-info"
-      id="restart"
-    ) Reiniciar
-  .fighter-controls-sub-2
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="sub4f2"
-    ) - 4
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="sub3f2"
-    ) - 3
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="sub2f2"
-    ) - 2
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="subadvf2"
-    ) - vent
-    button(
-      type=button
-      class="btn btn-dark btn-sm"
-      id="subpenalf2"
-    ) - penal
+    button.btn.btn-success#start Iniciar
+    button.btn.btn-info#restart Reiniciar
+  .fighter-2-controls-sub
+    button.btn.btn-dark.btn-sm#sub4f2 - 4
+    button.btn.btn-dark.btn-sm#sub3f2 - 3
+    button.btn.btn-dark.btn-sm#sub2f2 - 2
+    button.btn.btn-dark.btn-sm#subadvf2 - vent
+    button.btn.btn-dark.btn-sm#subpenalf2 - penal

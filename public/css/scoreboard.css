@@ -5,7 +5,7 @@ html, body {
 body {
   margin: 0;
   display: grid;
-  grid-template-columns: repear(1fr, 12);
+  grid-template-columns: repeat(1fr, 12);
   grid-template-rows: 2fr 1fr 5fr 2fr 1fr 1fr;
   font-family: 'Roboto Mono, monospace';
 }
@@ -47,7 +47,7 @@ body {
   }
 }
 
-.fighter-name-1 {
+.fighter-1-name {
   background-color: #22A203;
   color: #FCFF51;
   font-size: 1.5em;
@@ -59,7 +59,7 @@ body {
   grid-column: span 6;
 }
 
-.fighter-name-2 {
+.fighter-2-name {
   background-color: #fff;
   color: #000;
   font-size: 1.5em;
@@ -71,7 +71,7 @@ body {
   grid-column: span 6;
 }
 
-.fighter-score-1 {
+.fighter-1-score {
   grid-row-start: 3;
   grid-column: span 6;
   background-color: #22A203;
@@ -83,7 +83,7 @@ body {
   justify-content: center;
 }
 
-.fighter-score-2 {
+.fighter-2-score {
   grid-row-start: 3;
   grid-column: span 6;
   background-color: #fff;
@@ -95,7 +95,7 @@ body {
   justify-content: center;
 }
 
-.fighter-adv-1 {
+.fighter-1-adv {
   background-color: #FCFF51;
   color: #000;
   font-size: 5em;
@@ -107,7 +107,7 @@ body {
   grid-column: span 3;
 }
 
-.fighter-penal-1 {
+.fighter-1-penal {
   background-color: red;
   color: #fff;
   font-size: 5em;
@@ -119,7 +119,7 @@ body {
   grid-column: span 3;
 }
 
-.fighter-adv-2 {
+.fighter-2-adv {
   background-color: #FCFF51;
   color: #000;
   font-size: 5em;
@@ -131,7 +131,7 @@ body {
   grid-column: span 3;
 }
 
-.fighter-penal-2 {
+.fighter-2-penal {
   background-color: red;
   color: #fff;
   font-size: 5em;
@@ -143,7 +143,7 @@ body {
   grid-column: span 3;
 }
 
-.fighter-controls-add-1 {
+.fighter-1-controls-add {
   background-color: #BBBBBB;
   grid-row-start: 5;
   grid-column: span 4;
@@ -161,7 +161,7 @@ body {
   justify-content: space-around;
 }
 
-.fighter-controls-add-2 {
+.fighter-2-controls-add {
   background-color: #BBBBBB;
   grid-row-start: 5;
   grid-column: span 4;
@@ -170,7 +170,7 @@ body {
   justify-content: space-around;
 }
 
-.fighter-controls-sub-1 {
+.fighter-1-controls-sub {
   background-color: #BBBBBB;
   grid-row-start: 6;
   grid-column: span 4;
@@ -188,7 +188,7 @@ body {
   justify-content: space-around;
 }
 
-.fighter-controls-sub-2 {
+.fighter-2-controls-sub {
   background-color: #BBBBBB;
   grid-row-start: 6;
   grid-column: span 4;
@@ -197,7 +197,7 @@ body {
   justify-content: space-around;
 }
 
-input#fighter-name-1 {
+input#fighter-1-name {
   text-align: center;
   background-color: #22A203;
   color: #FCFF51;
@@ -206,17 +206,17 @@ input#fighter-name-1 {
   width: 80%;
 }
 
-input#fighter-name-2 {
+input#fighter-2-name {
   text-align: center;
   font-weight: bold;
   border: none;
   width: 80%;
 }
 
-input#fighter-name-1::placeholder { /* Most modern browsers support this now. */
+input#fighter-1-name::placeholder { /* Most modern browsers support this now. */
   color: #fff;
 }
 
-input#fighter-name-2::placeholder {
+input#fighter-2-name::placeholder {
   color: #000;
 }

@@ -6,6 +6,13 @@ const App = {
   minutes: 5,
 };
 
+const WS_ACTIONS = {
+  START: 'bjj:start',
+  RESTART: 'bjj:restart',
+  SCORE: 'bjj:score',
+  NAME: 'bjj:name',
+};
+
 /*
 * Init App
 */
@@ -35,13 +42,13 @@ App.init = () => {
   $('#subpenalf2').click(App.subpenalf2);
   $('#addmin').click(App.addmin);
   $('#submin').click(App.submin);
-  $('#fighter-name-1').keyup(App.fightername1);
-  $('#fighter-name-2').keyup(App.fightername2);
+  $('#fighter-1-name').keyup(App.fightername1);
+  $('#fighter-2-name').keyup(App.fightername2);
 };
 
 App.emit = data => {
   const { value, oper, fighter, type } = data;
-  socket.emit('bjj:score', {
+  socket.emit(WS_ACTIONS.SCORE, {
     value,
     oper,
     fighter,
@@ -80,74 +87,102 @@ App.stopTimer = () => {
 }
 
 App.start = () => {
-  socket.emit('bjj:start', { start: true });
+  socket.emit(WS_ACTIONS.START, { start: true });
 };
 
 App.restart = () => {
-  socket.emit('bjj:restart', { restart: true });
+  socket.emit(WS_ACTIONS.RESTART, { restart: true });
 };
 
 // sockets
-socket.on('bjj:score', data => {
+socket.on(WS_ACTIONS.SCORE, data => {
   let val;
+  let movScore = 0;
   if (data.type === 'time') {
     App.seconds = data.value * 60;
     App.seconds = App.seconds < 60 ? 60 : App.seconds;
     App.minutes = data.value;
     App.renderTimer(App.seconds);
   } else {
-    val = parseInt($(`.fighter-${data.type}-${data.fighter}`).text());
+    val = parseInt($(`.fighter-${data.fighter}-${data.type}`).text());
+    if ($(`.fighter-${data.fighter}-${data.value}-points`).length > 0) {
+      movScore = parseInt($(`.fighter-${data.fighter}-${data.value}-points > .points-score`).text());
+    }
     if (data.oper === 'add') {
       val += data.value;
+      movScore += data.value;
     } else {
       val -= data.value;
+      movScore -= data.value;
     }
-    $(`.fighter-${data.type}-${data.fighter}`).text(val);
+    $(`.fighter-${data.fighter}-${data.type}`).text(val);
+    if ($(`.fighter-${data.fighter}-${data.value}-points`).length > 0) {
+      $(`.fighter-${data.fighter}-${data.value}-points > .points-score`).text(movScore);
+    }
   }
 });
 
-socket.on('bjj:start', data => {
+socket.on(WS_ACTIONS.START, data => {
   if (data.start === true) {
     if (App.timer !== 0) {
       App.stopTimer();
+      if ($(`.fighter-1-4-points`).length > 0) {
+        $('#start').attr('class', '');
+        $('#start').addClass('fas fa-play-circle');
+      } else {
+        $('#start').text('Iniciar');
+      }
     } else {
       App.renderTimer(App.seconds);
       App.startTimer();
+      if ($(`.fighter-1-4-points`).length > 0) {
+        $('#start').attr('class', '');
+        $('#start').addClass('fas fa-pause-circle');
+      } else {
+        $('#start').text('Pausa');
+      }
     }
   }
 });
 
-socket.on('bjj:restart', data => {
+socket.on(WS_ACTIONS.RESTART, data => {
   if (data.restart === true) {
+    if ($('.fighter-1-4-points').length > 0) {
+      $('#start').attr('class', '');
+      $('#start').addClass('fas fa-play-circle');
+      $('.points-score').text('0');
+    } else {
+      $('#start').text('Iniciar');
+    }
     App.stopTimer();
     App.seconds = App.minutes * 60;
     App.renderTimer(App.seconds);
-    $('.fighter-score-1').text('0');
-    $('.fighter-score-2').text('0');
-    $('.fighter-adv-1').text('0');
-    $('.fighter-penal-1').text('0');
-    $('.fighter-adv-2').text('0');
-    $('.fighter-penal-2').text('0');
-    $('#fighter-name-1').val('');
-    $('#fighter-name-2').val('');
+    $('.fighter-1-score').text('0');
+    $('.fighter-2-score').text('0');
+    $('.fighter-1-adv').text('0');
+    $('.fighter-1-penal').text('0');
+    $('.fighter-2-adv').text('0');
+    $('.fighter-2-penal').text('0');
+    $('#fighter-1-name').val('');
+    $('#fighter-1-name').val('');
   }
 });
 
-socket.on('bjj:name', data => {
-  $(`#fighter-name-${data.fighter}`).val(data.value);
+socket.on(WS_ACTIONS.NAME, data => {
+  $(`#fighter-${data.fighter}-name`).val(data.value);
 });
 
 // fighter name edit
 App.fightername1 = () => {
-  socket.emit('bjj:name', {
-    value: $('#fighter-name-1').val(),
+  socket.emit(WS_ACTIONS.NAME, {
+    value: $('#fighter-1-name').val(),
     fighter: 1,
   });
 };
 
 App.fightername2 = () => {
-  socket.emit('bjj:name', {
-    value: $('#fighter-name-2').val(),
+  socket.emit(WS_ACTIONS.NAME, {
+    value: $('#fighter-2-name').val(),
     fighter: 2,
   });
 };
