@@ -22,12 +22,12 @@ body {
 }
 
 input {
-  margin-left: 20px;
+  margin-left: 10px;
   background-color: #e5e8f4;
   color: #000;
   font-weight: bold;
   border: none;
-  width: 80%;
+  width: 70%;
 }
 
 input::placeholder { /* Most modern browsers support this now. */
@@ -187,12 +187,12 @@ input::placeholder { /* Most modern browsers support this now. */
 }
 
 .points-score {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
 }
 
 .points-btn {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: bold;
   display: flex;
   width: 50%;
@@ -214,4 +214,24 @@ input::placeholder { /* Most modern browsers support this now. */
   margin-top: 5px;
   justify-content: space-between;
   align-items: center;
+}
+
+.fighter-1-penal, .fighter-2-penal {
+  color: #dc3545;
+}
+
+.fa-plus-circle {
+  color: #007bff;
+  margin-right: 2px;
+  font-size: 1.5em;
+}
+
+.fa-minus-circle {
+  color: #dc3545;
+  margin-left: 2px;
+  font-size: 1.5em;
+}
+
+.fighter-1-adv-pen {
+  z-index: 1;
 }
