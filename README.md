@@ -5,7 +5,7 @@ This is a websockets Brazilian Jiu-Jitsu scoreboard, we use it in our academy to
 
 With this software you can control the scoreboard from a mobile, tablet or any other device in the same wifi network. Hope it's useful to someone.
 
-![Scoreboard](./scoreboard.gif?raw=true "Scoreboard")
+![Scoreboard](./media/scoreboard.gif?raw=true "Scoreboard")
 
 ## Install
     git clone https://github.com/grunch/BJJ-Scoreboard.git
@@ -17,5 +17,15 @@ With this software you can control the scoreboard from a mobile, tablet or any o
 The system will be running on port 3000, so you just need to go to this url http://localhost:3000
 
 Now you need to let know to other users in your same network your IP address to let them operate the scoreboard, then they just need to write on their browser http://your-ip-address:3000
+
+## Screens
+The app have two screens, the main screen is meant to be used in big screens and the mobile screen, for smaller screens.
+### Main screen
+![Scoreboard](./media/BJJ-Scoreboard.png?raw=true "Scoreboard")
+### Mobile screen
+![Scoreboard](./media/mobile.png?raw=true "Scoreboard")
+
+To access to the mobile screen control mode you just click on the top right wolf logo on the main screen, this will redirect you to http://localhost:3000/control
+
 ## License
 This software is open source, you can use it and modify without asking permission, to know more about it you can read the [license](LICENSE)

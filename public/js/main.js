@@ -164,7 +164,7 @@ socket.on(WS_ACTIONS.RESTART, data => {
     $('.fighter-2-adv').text('0');
     $('.fighter-2-penal').text('0');
     $('#fighter-1-name').val('');
-    $('#fighter-1-name').val('');
+    $('#fighter-2-name').val('');
   }
 });
 
