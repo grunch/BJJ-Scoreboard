@@ -6,7 +6,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(1fr, 12);
-  grid-template-rows: 2fr 1fr 6fr 3fr;
+  grid-template-rows: 2fr 1fr 5fr 2fr 1fr 1fr;
   font-family: 'Roboto Mono, monospace';
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 .logo1 > img, .logo2 > img {
-  /* height: 112px; */
+  height: 112px;
 }
 
 .timer {
@@ -42,6 +42,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  img {
+    width: 120px;
+  }
 }
 
 .fighter-1-name {
@@ -138,6 +141,60 @@ body {
   justify-content: center;
   grid-row-start: 4;
   grid-column: span 3;
+}
+
+.fighter-1-controls-add {
+  background-color: #BBBBBB;
+  grid-row-start: 5;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.controls-1 {
+  background-color: #BBBBBB;
+  grid-row-start: 5;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fighter-2-controls-add {
+  background-color: #BBBBBB;
+  grid-row-start: 5;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fighter-1-controls-sub {
+  background-color: #BBBBBB;
+  grid-row-start: 6;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.controls-2 {
+  background-color: #BBBBBB;
+  grid-row-start: 6;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fighter-2-controls-sub {
+  background-color: #BBBBBB;
+  grid-row-start: 6;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 input#fighter-1-name {

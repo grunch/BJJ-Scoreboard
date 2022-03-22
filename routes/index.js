@@ -10,4 +10,8 @@ router.get('/control', function(req, res, next) {
   res.render('control', { title: 'BJJ Scoreboard control' });
 });
 
+router.get('/control2', function(req, res, next) {
+  res.render('control2', { title: 'BJJ Scoreboard control' });
+});
+
 module.exports = router;

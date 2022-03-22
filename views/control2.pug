@@ -1,0 +1,56 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/css/scoreboard-control.css')
+  .logo1
+    img(src="/images/360-ojo-300x279.png")
+  .timer
+  .logo2
+    a(href="/control")
+      img(src="/images/logo360-2.png")
+  .fighter-1-name
+    input#fighter-1-name(
+      type="text",
+      placeholder="clic para agregar luchador"
+    )
+  .fighter-2-name
+    input#fighter-2-name(
+      type="text",
+      placeholder="clic para agregar luchador"
+    )
+  .fighter-1-score 0
+  .fighter-2-score 0
+  .fighter-1-adv 0
+  .fighter-1-penal 0
+  .fighter-2-adv 0
+  .fighter-2-penal 0
+  .fighter-1-controls-add
+    button.btn.btn-dark.btn-sm#add4f1 + 4
+    button.btn.btn-dark.btn-sm#add3f1 + 3
+    button.btn.btn-dark.btn-sm#add2f1 + 2
+    button.btn.btn-dark.btn-sm#addadvf1 + vent
+    button.btn.btn-dark.btn-sm#addpenalf1 + penal
+  .controls-1
+    button.btn.btn-dark.btn-sm#addmin + min
+    button.btn.btn-dark.btn-sm#submin - min
+  .fighter-2-controls-add
+    button.btn.btn-dark.btn-sm#add4f2 + 4
+    button.btn.btn-dark.btn-sm#add3f2 + 3
+    button.btn.btn-dark.btn-sm#add2f2 + 2
+    button.btn.btn-dark.btn-sm#addadvf2 + vent
+    button.btn.btn-dark.btn-sm#addpenalf2 + penal
+  .fighter-1-controls-sub
+    button.btn.btn-dark.btn-sm#sub4f1 - 4
+    button.btn.btn-dark.btn-sm#sub3f1 - 3
+    button.btn.btn-dark.btn-sm#sub2f1 - 2
+    button.btn.btn-dark.btn-sm#subadvf1 - vent
+    button.btn.btn-dark.btn-sm#subpenalf1 - penal
+  .controls-2
+    button.btn.btn-success#start Iniciar
+    button.btn.btn-info#restart Reiniciar
+  .fighter-2-controls-sub
+    button.btn.btn-dark.btn-sm#sub4f2 - 4
+    button.btn.btn-dark.btn-sm#sub3f2 - 3
+    button.btn.btn-dark.btn-sm#sub2f2 - 2
+    button.btn.btn-dark.btn-sm#subadvf2 - vent
+    button.btn.btn-dark.btn-sm#subpenalf2 - penal
