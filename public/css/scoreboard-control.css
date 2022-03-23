@@ -19,8 +19,8 @@ body {
   justify-content: center;
 }
 
-.logo1 > img, .logo2 > img {
-  height: 112px;
+.logo1 img, .logo2 img {
+  height: 120px;
 }
 
 .timer {
