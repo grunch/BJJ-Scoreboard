@@ -6,7 +6,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(1fr, 12);
-  grid-template-rows: 1fr 2fr 2fr 1fr 4fr;
+  grid-template-rows: 1fr 3fr 2fr 1fr 4fr;
   font-family: 'Roboto Mono, monospace';
 }
 
@@ -106,7 +106,7 @@ input::placeholder { /* Most modern browsers support this now. */
 }
 
 .adv-pen-text {
-  font-size: 0.4em;
+  font-size: 0.5em;
 }
 
 .timer-box {
@@ -183,7 +183,7 @@ input::placeholder { /* Most modern browsers support this now. */
 }
 
 .points-text {
-  font-size: 0.5em;
+  font-size: 0.8em;
 }
 
 .points-score {
@@ -221,7 +221,7 @@ input::placeholder { /* Most modern browsers support this now. */
 }
 
 .fa-plus-circle {
-  color: #007bff;
+  color: #037015;
   margin-right: 2px;
   font-size: 1.5em;
 }
