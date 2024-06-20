@@ -12,7 +12,7 @@
     "express": "~4.19.2",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
-    "pug": ">=3.0.1",
+    "pug": ">=3.0.3",
     "socket.io": "^4.6.2"
   },
   "devDependencies": {
