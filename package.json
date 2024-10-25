@@ -7,13 +7,13 @@
     "dev": "nodemon app.js"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.3",
+    "cookie-parser": "~1.4.7",
     "debug": "~2.6.9",
-    "express": "~4.21.0",
+    "express": "~4.21.1",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
     "pug": ">=3.0.3",
-    "socket.io": "^4.7.5"
+    "socket.io": "^4.8.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
