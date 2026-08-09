@@ -1,5 +1,18 @@
 # BJJ Scoreboard
 
+> [!WARNING]
+> ## ⚠️ 🚨 THIS PROJECT IS DEPRECATED 🚨 ⚠️
+>
+> **BJJ Scoreboard is no longer maintained.** This project has evolved into **[Choke](https://github.com/protolayer-io/choke)** 🥋
+>
+> **Choke** is a mobile app (Android & iOS, built with Flutter and Rust) to create, score and publish Brazilian Jiu-Jitsu matches in real time over the [Nostr](https://nostr.com) protocol — no accounts needed, all match data is published as open, verifiable decentralized events. It supports scoring for takedowns, guard passes, positions and penalties, with a configurable countdown timer and audible alerts.
+>
+> It comes with a companion project, **[Choke Scoreboard](https://github.com/protolayer-io/choke-scoreboard)**: a real-time web scoreboard that subscribes to matches over Nostr and displays live scores, perfect for spectators and tournament projection screens.
+>
+> 👉 Check them out:
+> - **Choke (mobile scoring app):** https://github.com/protolayer-io/choke
+> - **Choke Scoreboard (live web viewer):** https://github.com/protolayer-io/choke-scoreboard
+
 ## Overview
 This is a websockets Brazilian Jiu-Jitsu scoreboard, we use it in our academy to teach to our BJJ practitioners how to count points in a tournament fight, there are some solutions online, but none fit our needs, so I built one.
 
