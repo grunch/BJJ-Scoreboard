@@ -22,7 +22,7 @@ With this software you can control the scoreboard from a mobile, tablet or any o
 
 ## Install
     git clone https://github.com/grunch/BJJ-Scoreboard.git
-    cd bjj-scoreboard
+    cd BJJ-Scoreboard
     npm install
 ## Start
 
